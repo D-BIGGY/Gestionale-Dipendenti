@@ -24,7 +24,7 @@ export class CreaDipendentiComponent implements OnInit{
   saveDipendente(){
     this.dipendenteService.createDipendente(this.dipendente).subscribe( data => {
       console.log(data);
-      this.goToEmployeeList();
+      this.goToDipendentiList();
       
     },
       error => console.log(error));
