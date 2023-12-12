@@ -21,6 +21,11 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
     DettagliDipendentiComponent,
     UserPageComponent,
     AdminPageComponent
+
+
+@NgModule({
+  declarations: [
+    AppComponent
   ],
   imports: [
     BrowserModule,

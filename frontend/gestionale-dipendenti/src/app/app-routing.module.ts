@@ -13,6 +13,10 @@ const routes: Routes = [
   {path: '', redirectTo: 'dipendenti', pathMatch: 'full'}
 ];
 
+
+const routes: Routes = [];
+
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
