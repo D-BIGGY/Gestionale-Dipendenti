@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-//import { Employee } from '../employee';
 import { ActivatedRoute } from '@angular/router';
 import { DipendenteService } from '../dipendente.service';
 import { Dipendente } from '../dipendente';
@@ -11,7 +10,8 @@ import { Dipendente } from '../dipendente';
 })
 export class DettagliDipendentiComponent implements OnInit {
   
-  id!: number;
+  id: number = 0;
+
   dipendente: Dipendente = new Dipendente;
 
   constructor(
@@ -25,7 +25,7 @@ export class DettagliDipendentiComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
 
     this.dipendente = new Dipendente();
-    this.dipendenteService.getDipendenteById(this.id).subscribe( data => {
+    this.dipendenteService.getDipendenteById(this.id).subscribe(data => {
       this.dipendente= data;
     })
   }
