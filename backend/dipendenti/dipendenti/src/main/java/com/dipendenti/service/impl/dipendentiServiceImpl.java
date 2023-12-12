@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import com.dipendenti.entity.Dipendente;
 import com.dipendenti.repository.DipendentiRepository;
 import com.dipendenti.service.DipendentiService;
@@ -13,7 +13,7 @@ import com.dipendenti.service.DipendentiService;
 import jakarta.validation.Valid;
 
 public class dipendentiServiceImpl implements DipendentiService {
-
+	@Autowired
 	DipendentiRepository diprepo;
 
 	public dipendentiServiceImpl(DipendentiRepository diprepo) {
