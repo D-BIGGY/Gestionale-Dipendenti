@@ -8,7 +8,7 @@ import { Dipendente } from './dipendente';
 })
 export class DipendenteService {
 
-  private baseURL = "http://localhost:8080/gestionale/api/dipendenti"
+  private baseURL = "http://localhost:8080/gestionale/api/dipendente"
 
   constructor(private httpClient: HttpClient) { }
 

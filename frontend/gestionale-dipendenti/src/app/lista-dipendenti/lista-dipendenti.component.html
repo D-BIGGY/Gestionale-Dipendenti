@@ -21,14 +21,14 @@
             <td>
 
                 <div>
-                    <button type="button"  class="btn btn-secondary btn-sm">
+                    <button type="button" (click)="dipendenteDettagli(dipendente.id)" class="btn btn-secondary btn-sm">
                         Dettagli</button>
 
-                    <button type="button"  class="btn btn-info btn-sm ms-2">
-                        Update</button>
+                    <button type="button" (click)="updateDipendente(dipendente.id)" class="btn btn-info btn-sm ms-2">
+                        Modifica</button>
 
-                    <button type="button"  class="btn btn-danger btn-sm ms-2">
-                        Delete</button>
+                    <button type="button" (click)="deleteDipendente(dipendente.id)" class="btn btn-danger btn-sm ms-2">
+                        Cancella</button>
 
 
                 </div>
