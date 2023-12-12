@@ -8,7 +8,7 @@ import { CreaDipendentiComponent } from './crea-dipendenti/crea-dipendenti.compo
 const routes: Routes = [
   {path: 'dipendenti', component: ListaDipendentiComponent},
   {path: 'crea-dipendenti', component: CreaDipendentiComponent},
-  {path: 'modifica-dipendeti/:id', component: ModificaDipendentiComponent},
+  {path: 'modifica-dipendenti/:id', component: ModificaDipendentiComponent},
   {path: 'dettagli-dipendenti/:id', component: DettagliDipendentiComponent},
   {path: '', redirectTo: 'dipendenti', pathMatch: 'full'}
 ];
