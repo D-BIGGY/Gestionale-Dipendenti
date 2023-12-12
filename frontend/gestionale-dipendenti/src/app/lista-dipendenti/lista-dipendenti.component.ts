@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DipendenteService } from '../dipendente.service';
 import { Router } from '@angular/router';
 import { Dipendente } from '../dipendente';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-lista-dipendenti',
@@ -9,7 +10,7 @@ import { Dipendente } from '../dipendente';
   styleUrls: ['./lista-dipendenti.component.css']
 })
 export class ListaDipendentiComponent implements OnInit{
-  dipendenti: Dipendente[];
+  dipendenti: Dipendente[] = [];
 
   constructor(private dipendenteService: DipendenteService, private router: Router){
 
