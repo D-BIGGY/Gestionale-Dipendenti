@@ -2,12 +2,13 @@ package com.dipendenti.service.impl;
 
 import java.util.List;
 import java.util.Optional;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import com.dipendenti.entity.Entrate;
 import com.dipendenti.repository.RepositoryEntrate;
 import com.dipendenti.service.EntrateService;
 
 public class EntrateServiceImpl implements EntrateService{
+	@Autowired
 	public RepositoryEntrate repositoryEntrate;
 
 	@Override
