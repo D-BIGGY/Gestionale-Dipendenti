@@ -1,11 +1,13 @@
 export class Dipendente {
-    id: number = 0;
+    id: number | undefined;
     nome: String = '';
     cognome: String = '';
+    matricola: String = '';
     username: String = '';
     email: String = '';
+    password: String = '';
 
     constructor(){
-        
+
     }
 }

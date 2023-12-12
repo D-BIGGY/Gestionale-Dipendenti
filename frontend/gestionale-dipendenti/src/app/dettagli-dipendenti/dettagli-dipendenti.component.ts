@@ -10,7 +10,7 @@ import { Dipendente } from '../dipendente';
 })
 export class DettagliDipendentiComponent implements OnInit {
   
-  id: number = 0;
+  id: any;
 
   dipendente: Dipendente = new Dipendente;
 

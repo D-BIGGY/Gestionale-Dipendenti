@@ -10,7 +10,7 @@ import { Dipendente } from '../dipendente';
 })
 export class ModificaDipendentiComponent implements OnInit{
   dipendente: Dipendente = new Dipendente();
-  id: number = 0;
+  id: any;
 
   constructor(
     private dipendenteService: DipendenteService,

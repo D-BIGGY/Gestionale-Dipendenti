@@ -11,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ListaDipendentiComponent implements OnInit{
   dipendenti: Dipendente[] = [];
-
+  
   constructor(private dipendenteService: DipendenteService, private router: Router){
 
   }
@@ -24,15 +24,15 @@ export class ListaDipendentiComponent implements OnInit{
     this.dipendenteService.getDipendenteList().subscribe(data => { this.dipendenti = data; });
   }
 
-  dipendenteDettagli(id: number){
+  dipendenteDettagli(id: any){
     this.router.navigate(['dettagli-dipendenti', id]);
   }
 
-  updateDipendente(id:number){
+  updateDipendente(id: any){
     this.router.navigate(['modifica-dipendenti', id]);
   }
 
-  deleteDipendente(id: number){
+  deleteDipendente(id: any){
     this.dipendenteService.deleteDipendente(id).subscribe(data => {
       console.log(data);
       this.getDipendenti();
