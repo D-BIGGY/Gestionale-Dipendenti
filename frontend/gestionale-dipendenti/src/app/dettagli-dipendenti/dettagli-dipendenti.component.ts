@@ -11,8 +11,8 @@ import { Dipendente } from '../dipendente';
 })
 export class DettagliDipendentiComponent implements OnInit {
   
-  id: number;
-  dipendente: Dipendente;
+  id!: number;
+  dipendente: Dipendente = new Dipendente;
 
   constructor(
     private route: ActivatedRoute,

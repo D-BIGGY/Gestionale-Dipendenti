@@ -1,7 +1,11 @@
 export class Dipendente {
-    id: number;
-    nome: String;
-    cognome: String;
-    username: String;
-    email: String;
+    id: number = 0;
+    nome: String = '';
+    cognome: String = '';
+    username: String = '';
+    email: String = '';
+
+    constructor(){
+        
+    }
 }
