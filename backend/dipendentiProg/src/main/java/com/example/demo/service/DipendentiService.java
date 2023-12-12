@@ -1,5 +1,7 @@
 package com.example.demo.service;
 
+import java.util.Optional;
+
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 
@@ -15,5 +17,9 @@ public interface DipendentiService {
 	void cancDip(long id);
 
 	public Dipendente modDip(long id, Dipendente dipendente) throws MethodArgumentNotValidException;
+
+	Optional<Dipendente> getDip(long id);
+
+	Boolean login(Dipendente dip);
 
 }

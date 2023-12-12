@@ -34,22 +34,32 @@ public class dipendentiController {
 	@Autowired
 	UsciteService uscserv;
 
+	@PostMapping("/login")
+	public Boolean login(@RequestBody Dipendente dip) {
+		return dipserv.login(dip);
+	}
+
 	@PostMapping("/aggiungiDipendente")
 	public void addUtente(@RequestBody Dipendente dip) {
 		dipserv.addDip(dip);
 	}
 
-	@GetMapping("/dipendente")
+	@GetMapping("/dipendente/{id}")
+	public Optional<Dipendente> getDip(@PathVariable("id") Long id) {
+		return dipserv.getDip(id);
+	}
+
+	@GetMapping("/dipendenti")
 	public Iterable<Dipendente> getTuttiDip() {
 		return dipserv.getTuttiDip();
 	}
 
-	@DeleteMapping("/cancellaDipendente")
-	public void cancDip(long id) {
+	@DeleteMapping("/cancellaDipendente/{id}")
+	public void cancDip(@PathVariable("id") long id) {
 		dipserv.cancDip(id);
 	}
 
-	@PutMapping("/modificaDipendente")
+	@PutMapping("/modificaDipendente/{id}")
 	public Dipendente modDip(@RequestBody Dipendente dip, @PathVariable("id") long id)
 			throws MethodArgumentNotValidException {
 
@@ -57,47 +67,52 @@ public class dipendentiController {
 	}
 
 	@PostMapping("/aggEntrata")
-	public void aggEntr(Entrate entrate) {
+	public void aggEntr(@RequestBody Entrate entrate) {
 		entserv.save(entrate);
 	}
 
-	@GetMapping("/entrata")
-	public Optional<Entrate> getEntrate(Long id) {
+	@GetMapping("/entrata/{id}")
+	public Optional<Entrate> getEntrate(@PathVariable("id") Long id) {
 		return entserv.getEntrate(id);
 	}
 
-	@PutMapping("/modificaEntrata")
-	public void modEnt(Entrate entrate, Long id) {
+	@PutMapping("/modificaEntrata/{id}")
+	public void modEnt(@RequestBody Entrate entrate, Long id) {
 		entserv.updateEntrata(entrate, id);
 	}
 
-	@DeleteMapping("/cancEntrata")
-	public void delEnt(Long id) {
+	@DeleteMapping("/cancEntrata/{id}")
+	public void delEnt(@PathVariable("id") Long id) {
 		entserv.deleteEntrata(id);
 	}
 
+	@GetMapping("/entrate")
+	public List<Entrate> getTutteEntrate() {
+		return entserv.getTutteEntrate();
+	}
+
 	@GetMapping("/aggUscita")
-	public void aggUsc(Uscite uscite) {
+	public void aggUsc(@RequestBody Uscite uscite) {
 		uscserv.saveUscita(uscite);
 	}
 
-	@GetMapping("/uscita")
-	public Optional<Uscite> getUscite(Long id) {
+	@GetMapping("/uscita/{id}")
+	public Optional<Uscite> getUscita(@PathVariable("id") Long id) {
 		return uscserv.getUscita(id);
 	}
 
-	@PutMapping("/modificaUscita")
-	public void modUsc(Uscite uscite, Long id) {
+	@PutMapping("/modificaUscita/{id}")
+	public void modUsc(@RequestBody Uscite uscite, @PathVariable("id") Long id) {
 		uscserv.updateUscita(uscite, id);
 	}
 
-	@DeleteMapping("/cancUscita")
-	public void delUsc(Long id) {
+	@DeleteMapping("/cancUscita/{id}")
+	public void delUsc(@PathVariable("id") Long id) {
 		uscserv.deleteUscita(id);
 	}
 
 	@GetMapping("/uscite")
-	public List<Uscite> getUscita() {
+	public List<Uscite> getUscite() {
 		return uscserv.getTutteUscite();
 	}
 }

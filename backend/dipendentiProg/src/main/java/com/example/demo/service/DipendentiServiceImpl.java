@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -44,6 +45,20 @@ public class DipendentiServiceImpl implements DipendentiService {
 		dip.setPassword(dipendente.getPassword());
 		dip.setEmail(dipendente.getEmail());
 		return dip;
+	}
+
+	public Optional<Dipendente> getDip(long id) {
+		return diprepo.findById(id);
+	}
+
+	public Boolean login(Dipendente dip) {
+		Boolean temp = false;
+		if (diprepo.findByUsername(dip.getUsername())) {
+			if (diprepo.findByPassword(dip.getPassword())) {
+				temp = true;
+			}
+		}
+		return temp;
 	}
 
 }
