@@ -1,3 +1,14 @@
+:root{
+    --pastel-red: #ff6961;
+    --pastel-green: #61c361;
+    --pastel-dark-green: #4eab4e;
+    --pastel-yellow: #fdfd96;
+    --pastel-blue: #5aabfd;
+    --pastel-pink: #fdcae1;
+    --pastel-light-blue: #82bffc;
+    --light-grey: #5b5b5b;
+    --dark-grey: #222222;
+}
 
 html {
     height: 100%;
