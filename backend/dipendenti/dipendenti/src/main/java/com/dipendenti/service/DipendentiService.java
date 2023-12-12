@@ -16,11 +16,10 @@ public interface DipendentiService {
 
 	List<Dipendente> getTuttiDip();
 
-	void addDip(@Valid @RequestBody Dipendente dip);
+	void addDip(Dipendente dip);
 
-	void cancDip(@PathVariable("id") long id);
+	void cancDip(long id);
 
-	public Dipendente modDip(@PathVariable("id") long id, @Valid @RequestBody Dipendente dipendente)
-			throws MethodArgumentNotValidException;
+	public Dipendente modDip(long id, Dipendente dipendente) throws MethodArgumentNotValidException;
 
 }
