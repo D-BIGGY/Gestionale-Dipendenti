@@ -1,4 +1,4 @@
-export class Dipendente{
+export class Dipendente {
     id: number;
     nome: String;
     cognome: String;
