@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Dipendente } from '';
+import { DipendenteService } from '../dipendente.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lista-dipendenti',
@@ -9,7 +10,7 @@ import { Dipendente } from '';
 export class ListaDipendentiComponent implements OnInit{
   dipendenti: Dipendente[];
 
-  constructor(private dipendenteService: Dipendenteservice, private router: Router){
+  constructor(private dipendenteService: DipendenteService, private router: Router){
 
   }
 
