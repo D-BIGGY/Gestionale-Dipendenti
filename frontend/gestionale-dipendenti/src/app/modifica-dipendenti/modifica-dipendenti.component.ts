@@ -47,7 +47,7 @@ export class ModificaDipendentiComponent implements OnInit{
 
 
   goToDipendenteList(){
-    this.router.navigate(['/employees']);
+    this.router.navigate(['/dipendenti']);
   }
 
 }

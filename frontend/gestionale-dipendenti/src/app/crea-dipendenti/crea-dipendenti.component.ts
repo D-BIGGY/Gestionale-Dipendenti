@@ -31,7 +31,7 @@ export class CreaDipendentiComponent implements OnInit{
   }
 
   goToDipendentiList(){
-    this.router.navigate(['/employees']);
+    this.router.navigate(['/dipendenti']);
   }
 
 
