@@ -2,13 +2,13 @@ package com.dipendenti.service.impl;
 
 import java.util.List;
 import java.util.Optional;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import com.dipendenti.entity.Uscite;
 import com.dipendenti.repository.RepositoryUscite;
 import com.dipendenti.service.UsciteService;
 
 public class UsciteServiceImpl implements UsciteService {
-	
+	@Autowired
 	public RepositoryUscite repositoryUscite;
 
 	@Override
