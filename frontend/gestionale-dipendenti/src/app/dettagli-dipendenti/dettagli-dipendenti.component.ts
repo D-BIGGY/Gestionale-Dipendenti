@@ -1,10 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+//import { Employee } from '../employee';
+import { ActivatedRoute } from '@angular/router';
+import { DipendenteService } from '../dipendente.service';
 
 @Component({
   selector: 'app-dettagli-dipendenti',
   templateUrl: './dettagli-dipendenti.component.html',
   styleUrls: ['./dettagli-dipendenti.component.css']
 })
-export class DettagliDipendentiComponent {
+export class DettagliDipendentiComponent implements OnInit {
+  
+  id: number;
+  dipendente: Dipendente;
 
+  constructor(
+    private route: ActivatedRoute,
+    private dipendenteService: DipendenteService
+    ){}
+
+
+  ngOnInit(): void {
+
+    this.id = this.route.snapshot.params['id'];
+
+    this.dipendente = new Dipendente();
+    this.dipendenteService.getDipendenteById(this.id).subscribe( data => {
+      this.dipendente= data;
+    })
+  }
 }
