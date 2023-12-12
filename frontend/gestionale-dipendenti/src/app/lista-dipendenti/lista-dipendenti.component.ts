@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DipendenteService } from '../dipendente.service';
 import { Router } from '@angular/router';
+import { Dipendente } from '../dipendente';
 
 @Component({
   selector: 'app-lista-dipendenti',

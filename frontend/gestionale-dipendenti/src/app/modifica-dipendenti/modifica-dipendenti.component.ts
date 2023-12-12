@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router'
 import { DipendenteService } from '../dipendente.service';
+import { Dipendente } from '../dipendente';
 
 @Component({
   selector: 'app-modifica-dipendenti',

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 //import { Employee } from '../employee';
 import { ActivatedRoute } from '@angular/router';
 import { DipendenteService } from '../dipendente.service';
+import { Dipendente } from '../dipendente';
 
 @Component({
   selector: 'app-dettagli-dipendenti',

@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 //import { Employee } from './employee';
 import { Observable } from 'rxjs';
+import { Dipendente } from './dipendente';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DipendenteService {
 
-  private baseURL = "http://localhost:8080/api/dipendenti"
+  private baseURL = "http://localhost:8080/gestionale/api/dipendenti"
 
   constructor(private httpClient: HttpClient) { }
 
@@ -18,8 +19,8 @@ export class DipendenteService {
   }
 
 
-  createDipendente(employee: Dipendente): Observable<Object>{
-    return this.httpClient.post(`${this.baseURL}`,dipendente);
+  createDipendente(dipendente: Dipendente): Observable<Object>{
+    return this.httpClient.post(`${this.baseURL}`, dipendente);
   }
 
 
@@ -28,7 +29,7 @@ export class DipendenteService {
   }
 
   updateDipendente(id : number, dipendente: Dipendente): Observable<Object>{
-    return this.httpClient.put(`${this.baseURL}/${id}`, employee);
+    return this.httpClient.put(`${this.baseURL}/${id}`, dipendente);
   }
 
 
