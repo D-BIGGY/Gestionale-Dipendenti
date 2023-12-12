@@ -42,9 +42,8 @@ public class DipendentiServiceImpl implements DipendentiService {
 		dip.setNome(dipendente.getNome());
 		dip.setCognome(dipendente.getCognome());
 		dip.setMatricola(dipendente.getMatricola());
-		dip.setPassword(dipendente.getPassword());
 		dip.setEmail(dipendente.getEmail());
-		return dip;
+		return diprepo.save(dip);
 	}
 
 	public Optional<Dipendente> getDip(long id) {
