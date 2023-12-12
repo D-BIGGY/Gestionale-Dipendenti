@@ -25,15 +25,15 @@ public class dipendentiServiceImpl implements DipendentiService {
 		return diprepo.findAll();
 	}
 
-	public void addDip(@Valid @RequestBody Dipendente dip) {
+	public void addDip(Dipendente dip) {
 		diprepo.save(dip);
 	}
 
-	public void cancDip(@PathVariable("id") long id) {
+	public void cancDip(long id) {
 		diprepo.deleteById(id);
 	}
 
-	public Dipendente modDip(@PathVariable("id") long id, @Valid @RequestBody Dipendente dipendente)
+	public Dipendente modDip(long id, Dipendente dipendente)
 			throws MethodArgumentNotValidException {
 
 		Dipendente dip = diprepo.findById(id).get();
