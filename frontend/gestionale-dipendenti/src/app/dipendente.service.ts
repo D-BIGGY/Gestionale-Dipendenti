@@ -19,7 +19,7 @@ export class DipendenteService {
 
 
   createDipendente(employee: Dipendente): Observable<Object>{
-    return this.httpClient.post(`${this.baseURL}`,employee);
+    return this.httpClient.post(`${this.baseURL}`,dipendente);
   }
 
 
