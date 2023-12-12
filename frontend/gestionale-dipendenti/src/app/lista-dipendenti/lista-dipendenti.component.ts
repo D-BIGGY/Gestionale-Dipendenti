@@ -1,0 +1,40 @@
+import { Component, OnInit } from '@angular/core';
+import { Dipendente } from '';
+
+@Component({
+  selector: 'app-lista-dipendenti',
+  templateUrl: './lista-dipendenti.component.html',
+  styleUrls: ['./lista-dipendenti.component.css']
+})
+export class ListaDipendentiComponent implements OnInit{
+  dipendenti: Dipendente[];
+
+  constructor(private dipendenteService: Dipendenteservice, private router: Router){
+
+  }
+
+  ngOnInit() {
+      this.getDipendenti();
+  }
+
+  private getDipendenti(){
+    this.dipendenteService.getDipendenteList().subscribe(data => { this.dipendenti = data; });
+  }
+
+  dipendenteDettagli(id: number){
+    this.router.navigate(['dettagli-dipendenti', id]);
+  }
+
+  updateDipendente(id:number){
+    this.router.navigate(['modifica-dipendenti', id]);
+  }
+
+  deleteDipendente(id: number){
+    this.dipendenteService.deleteDipendente(id).subscribe(data => {
+      console.log(data);
+      this.getDipendenti();
+    })
+  }
+
+
+}
