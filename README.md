@@ -1,8 +1,8 @@
-# 🚀 Web Application per la Gestione di Dipendenti
+# 🚀Sito Web per la Gestione di Dipendenti
 
 ## Introduzione
 
-In un mondo sempre più dinamico, la gestione efficiente delle risorse umane è cruciale per il successo di qualsiasi organizzazione. Questo progetto si propone di semplificare e ottimizzare il processo di monitoraggio delle presenze attraverso una web application, offrendo un sistema completo e intuitivo per dipendenti e amministratori.
+In un mondo sempre più dinamico, la gestione efficiente delle risorse umane è cruciale per il successo di qualsiasi organizzazione. Questo progetto si propone di semplificare e ottimizzare il processo di monitoraggio delle presenze attraverso un sito web, offrendo un sistema completo e intuitivo per dipendenti e amministratori.
 
 ## Panoramica delle Funzionalità
 
