@@ -52,7 +52,6 @@ L'accesso è protetto da un sistema di autenticazione sicuro. Le credenziali val
 
 Questo sito web per la gestione di dipendenti è progettato per migliorare la vostra gestione aziendale, fornendo un sistema intuitivo e personalizzato per gli utenti e un controllo completo per gli amministratori.
 
-
 ##Installazione Locale 🛠️
 Se desideri esplorare il sito in modalità locale, segui questi passaggi:
 
