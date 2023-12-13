@@ -1,37 +1,16 @@
+
 <div class="container mt-4">
-    <h3 class="mb-4">DETTAGLI DIPENDENTI</h3>
+    <h3 class="mb-4">DETTAGLI DIPENDENTE</h3>
     <div class="card">
         <div class="card-body">
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label"><b>ID:</b></label>
-                <div class="col-sm-10">
-                    {{ dipendente.id }}
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label"><b>Nome:</b></label>
-                <div class="col-sm-10">
-                    {{ dipendente.nome }}
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label"><b>Cognome:</b></label>
-                <div class="col-sm-10">
-                    {{ dipendente.cognome }}
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label"><b>Username:</b></label>
-                <div class="col-sm-10">
-                    {{ dipendente.username }}
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label"><b>Email:</b></label>
-                <div class="col-sm-10">
-                    {{ dipendente.email }}
-                </div>
-            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>ID:</b> {{ dipendente.id }}</li>
+                <li class="list-group-item"><b>Nome:</b> {{ dipendente.nome }}</li>
+                <li class="list-group-item"><b>Cognome:</b> {{ dipendente.cognome }}</li>
+                <li class="list-group-item"><b>Matricola:</b> {{ dipendente.matricola }}</li>
+                <li class="list-group-item"><b>Username:</b> {{ dipendente.username }}</li>
+                <li class="list-group-item"><b>Email:</b> {{ dipendente.email }}</li>
+            </ul>
         </div>
     </div>
 </div>
