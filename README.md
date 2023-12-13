@@ -51,3 +51,19 @@ L'accesso è protetto da un sistema di autenticazione sicuro. Le credenziali val
 ## Conclusione
 
 Questo sito web per la gestione di dipendenti è progettato per migliorare la vostra gestione aziendale, fornendo un sistema intuitivo e personalizzato per gli utenti e un controllo completo per gli amministratori.
+
+
+##Installazione Locale 🛠️
+Se desideri esplorare il sito in modalità locale, segui questi passaggi:
+
+- Assicurati di avere Node.js e npm installati sul tuo computer.
+- Clona il repository: git clone [URL del repository].
+- Naviga nella directory del progetto: cd nome-progetto.
+- Installa le dipendenze: npm install.
+- npm install bootstrap --save
+- npm install jquery --save
+- npm install popper.js --save
+- Avvia il server locale: ng serve.
+- Apri il tuo browser e vai su http://localhost:4200/.
+- Ora puoi esplorare il Portfolio Fotografico direttamente sul tuo computer locale.
+
