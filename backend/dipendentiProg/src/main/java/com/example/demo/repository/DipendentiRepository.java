@@ -8,8 +8,10 @@ import com.example.demo.entity.Dipendente;
 @Repository
 public interface DipendentiRepository extends JpaRepository<Dipendente, Long> {
 
-	Boolean findByUsername(String username);
+	Dipendente findByUsername(String username);
 
 	Boolean findByPassword(String password);
+
+	Boolean findByUsernameAndPassword(String username, String password);
 
 }
