@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo.entity.Dipendente;
 import com.example.demo.repository.DipendentiRepository;
 import com.example.demo.service.DipendentiService;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 
 @Service
 public class DipendentiServiceImpl implements DipendentiService {
@@ -28,6 +29,8 @@ public class DipendentiServiceImpl implements DipendentiService {
 	}
 
 	public void addDip(Dipendente dip) {
+		String pwhash = BCrypt.hashpw(dip.getPassword(), "");
+		dip.setPassword(pwhash);
 		diprepo.save(dip);
 	}
 
@@ -37,13 +40,16 @@ public class DipendentiServiceImpl implements DipendentiService {
 
 	public Dipendente modDip(long id, Dipendente dipendente) throws MethodArgumentNotValidException {
 
-		Dipendente dip = diprepo.findById(id).get();
-		dip.setUsername(dipendente.getUsername());
-		dip.setNome(dipendente.getNome());
-		dip.setCognome(dipendente.getCognome());
-		dip.setMatricola(dipendente.getMatricola());
-		dip.setEmail(dipendente.getEmail());
-		return diprepo.save(dip);
+		/*
+		 * Dipendente dip = diprepo.findById(id).get();
+		 * dip.setUsername(dipendente.getUsername()); dip.setNome(dipendente.getNome());
+		 * dip.setCognome(dipendente.getCognome());
+		 * dip.setMatricola(dipendente.getMatricola());
+		 * dip.setEmail(dipendente.getEmail()); dip.setRuolo(dipendente.getRuolo());
+		 */
+
+		dipendente.setId(id);
+		return diprepo.save(dipendente);
 	}
 
 	public Optional<Dipendente> getDip(long id) {
@@ -52,11 +58,15 @@ public class DipendentiServiceImpl implements DipendentiService {
 
 	public Boolean login(Dipendente dip) {
 		Boolean temp = false;
-		if (diprepo.findByUsername(dip.getUsername())) {
-			if (diprepo.findByPassword(dip.getPassword())) {
-				temp = true;
-			}
+
+		String pwhash = BCrypt.hashpw(dip.getPassword(), "");
+
+		Dipendente d1 = diprepo.findByUsername(dip.getUsername());
+
+		if (BCrypt.checkpw(d1.getPassword(), pwhash)) {
+			temp = true;
 		}
+
 		return temp;
 	}
 
