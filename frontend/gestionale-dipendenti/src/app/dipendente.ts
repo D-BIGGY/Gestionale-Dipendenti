@@ -6,6 +6,7 @@ export class Dipendente {
     username: String = '';
     email: String = '';
     password: String = '';
+    ruolo: any;
 
     constructor(){
 
