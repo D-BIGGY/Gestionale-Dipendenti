@@ -10,7 +10,7 @@ In un mondo sempre più dinamico, la gestione efficiente delle risorse umane è 
 
 Il sito web offre un login:
 
-- 🔐 **Sicuro**: l’accesso avviene in maniera sicura tramite una schermata di login che implementa una serie di controlli per evitare injection.
+- 🔐 **Sicuro**: l’accesso avviene in maniera sicura tramite una schermata di login che implementa una serie di controlli, ad esempio salvare nel DB la password crittografata.
 
 - 🔄 **Differenziato**: in base alle credenziali fornite, gli utenti vengono reindirizzati alla pagina utente o alla pagina amministratore.
 
