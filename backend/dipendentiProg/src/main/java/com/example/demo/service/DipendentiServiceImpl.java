@@ -18,6 +18,7 @@ import org.springframework.security.crypto.bcrypt.BCrypt;
 public class DipendentiServiceImpl implements DipendentiService {
 	@Autowired
 	public DipendentiRepository diprepo;
+	public String salt="123";
 
 	public DipendentiServiceImpl(DipendentiRepository diprepo) {
 		super();
@@ -29,7 +30,7 @@ public class DipendentiServiceImpl implements DipendentiService {
 	}
 
 	public void addDip(Dipendente dip) {
-		String pwhash = BCrypt.hashpw(dip.getPassword(), BCrypt.gensalt());
+		String pwhash = BCrypt.hashpw(dip.getPassword(), "123");
 		dip.setPassword(pwhash);
 		diprepo.save(dip);
 	}
@@ -47,7 +48,6 @@ public class DipendentiServiceImpl implements DipendentiService {
 		 * dip.setMatricola(dipendente.getMatricola());
 		 * dip.setEmail(dipendente.getEmail()); dip.setRuolo(dipendente.getRuolo());
 		 */
-
 		dipendente.setId(id);
 		return diprepo.save(dipendente);
 	}
@@ -56,7 +56,7 @@ public class DipendentiServiceImpl implements DipendentiService {
 		return diprepo.findById(id);
 	}
 
-	public Boolean login(Dipendente dip) {
+	public Boolean /*String*/ login(Dipendente dip) {
 		Boolean temp = false;
 
 		Dipendente d1 = diprepo.findByUsername(dip.getUsername());
@@ -65,7 +65,12 @@ public class DipendentiServiceImpl implements DipendentiService {
 			temp = true;
 		}
 
-		return temp;
+		return temp/* + "," + d1.getId() + "," + d1.getNome()*/;
+	}
+
+	@Override
+	public Dipendente getRuolo(Dipendente dip) {
+		return diprepo.findByUsername(dip.getUsername());
 	}
 
 }

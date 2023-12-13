@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,8 @@ public class EntrateServiceImpl implements EntrateService {
 
 	@Override
 	public void save(Entrate entrate) {
+		entrate.setDataEntrata(new Date());
+		System.out.println("suca");
 		repositoryEntrate.save(entrate);
 	}
 

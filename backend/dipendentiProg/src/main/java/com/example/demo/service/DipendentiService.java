@@ -20,6 +20,8 @@ public interface DipendentiService {
 
 	Optional<Dipendente> getDip(long id);
 
-	Boolean login(Dipendente dip);
+	Boolean /*String*/ login(Dipendente dip);
+	
+	Dipendente getRuolo(Dipendente dip);
 
 }

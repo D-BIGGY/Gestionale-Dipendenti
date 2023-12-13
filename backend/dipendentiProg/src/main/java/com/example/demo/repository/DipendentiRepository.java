@@ -12,6 +12,6 @@ public interface DipendentiRepository extends JpaRepository<Dipendente, Long> {
 
 	Boolean findByPassword(String password);
 
-	Boolean findByUsernameAndPassword(String username, String password);
+	Dipendente findByUsernameAndPassword(String username, String password);
 
 }

@@ -17,4 +17,5 @@ public interface UsciteService {
 	void deleteUscita(Long id);
 	
 	Optional<Uscite> getUscita(Long id);
+
 }

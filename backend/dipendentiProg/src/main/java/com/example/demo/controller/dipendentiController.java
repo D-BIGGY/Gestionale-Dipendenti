@@ -35,9 +35,15 @@ public class dipendentiController {
 	UsciteService uscserv;
 
 	@PostMapping("/login")
-	public Boolean login(@RequestBody Dipendente dip) {
+	public Boolean /*String*/ login(@RequestBody Dipendente dip) {
 		return dipserv.login(dip);
 	}
+	
+	@PostMapping("/getRuolo")
+	public Dipendente getRuoloDip(@RequestBody Dipendente dip) {
+		return dipserv.getRuolo(dip);
+	}
+
 
 	@PostMapping("/aggiungiDipendente")
 	public void addUtente(@RequestBody Dipendente dip) {
@@ -68,6 +74,7 @@ public class dipendentiController {
 
 	@PostMapping("/aggEntrata")
 	public void aggEntr(@RequestBody Entrate entrate) {
+		//entrate.setDataEntrata("2026-12-12T09:34:53.440+00:00");
 		entserv.save(entrate);
 	}
 
@@ -95,7 +102,6 @@ public class dipendentiController {
 	public void aggUsc(@RequestBody Uscite uscite) {
 		uscserv.saveUscita(uscite);
 	}
-
 
 	@GetMapping("/uscita/{id}")
 	public Optional<Uscite> getUscita(@PathVariable("id") Long id) {
