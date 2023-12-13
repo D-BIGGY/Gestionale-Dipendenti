@@ -29,7 +29,7 @@ public class DipendentiServiceImpl implements DipendentiService {
 	}
 
 	public void addDip(Dipendente dip) {
-		String pwhash = BCrypt.hashpw(dip.getPassword(), "");
+		String pwhash = BCrypt.hashpw(dip.getPassword(), BCrypt.gensalt());
 		dip.setPassword(pwhash);
 		diprepo.save(dip);
 	}
