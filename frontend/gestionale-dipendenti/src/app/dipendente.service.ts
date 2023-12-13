@@ -17,7 +17,7 @@ export class DipendenteService {
   }
 
   createDipendente(dipendente: Dipendente): Observable<Object>{
-    return this.httpClient.post(`${this.baseURL}/dipendente`, dipendente);
+    return this.httpClient.post(`${this.baseURL}/aggiungiDipendente`, dipendente);
   }
 
   getDipendenteById(id: number): Observable<Dipendente>{

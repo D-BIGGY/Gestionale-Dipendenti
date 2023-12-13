@@ -11,6 +11,8 @@ import { ModificaDipendentiComponent } from './modifica-dipendenti/modifica-dipe
 import { DettagliDipendentiComponent } from './dettagli-dipendenti/dettagli-dipendenti.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
+import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
+import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 
 
 
@@ -23,7 +25,9 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
     ModificaDipendentiComponent,
     DettagliDipendentiComponent,
     UserPageComponent,
-    AdminPageComponent
+    AdminPageComponent,
+    AdminNavbarComponent,
+    UserNavbarComponent
   ],
   imports: [
     BrowserModule,

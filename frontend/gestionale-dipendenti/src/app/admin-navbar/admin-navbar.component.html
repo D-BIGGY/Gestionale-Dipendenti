@@ -1,0 +1,15 @@
+<h1 class="text-center mt-4 mb-4">BENTORNATO ADMIN</h1>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a (click)="cambiaScheda(1)" class="nav-link">LISTA DIPENDENTI</a>
+        </li>
+        <li class="nav-item">
+            <a (click)="cambiaScheda(2)" class="nav-link">AGGIUNGI DIPENDENTE</a>
+        </li>
+
+    </ul>
+</nav>
+
+<app-lista-dipendenti *ngIf="varnav == 1"></app-lista-dipendenti>
+<app-crea-dipendenti *ngIf="varnav == 2"></app-crea-dipendenti>
