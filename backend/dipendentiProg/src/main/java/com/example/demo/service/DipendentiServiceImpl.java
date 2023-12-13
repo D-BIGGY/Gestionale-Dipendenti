@@ -59,11 +59,9 @@ public class DipendentiServiceImpl implements DipendentiService {
 	public Boolean login(Dipendente dip) {
 		Boolean temp = false;
 
-		String pwhash = BCrypt.hashpw(dip.getPassword(), "");
-
 		Dipendente d1 = diprepo.findByUsername(dip.getUsername());
 
-		if (BCrypt.checkpw(d1.getPassword(), pwhash)) {
+		if (BCrypt.checkpw(dip.getPassword(), d1.getPassword())) {
 			temp = true;
 		}
 
