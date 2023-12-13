@@ -22,7 +22,8 @@
                 <td> {{ dipendente.matricola }} </td>
                 <td> {{ dipendente.username }}</td>
                 <td> {{ dipendente.email }}</td>
-                <td> {{ dipendente.ruolo }} </td>
+                <td *ngIf = "dipendente.ruolo == true"> admin</td>
+                <td *ngIf = "dipendente.ruolo == false"> utente</td>
                 <td>
 
                     <div>

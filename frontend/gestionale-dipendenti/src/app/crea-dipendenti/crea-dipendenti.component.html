@@ -6,20 +6,38 @@
 
         <div class="form-group mt-4">
             <label> Nome </label>
-            <input type="text" class="form-control mt-3" id="nome" [(ngModel)]="dipendente.nome"
-                name="nome" placeholder="Inserisci il nome">
+            <input 
+                type="text" 
+                class="form-control mt-3" 
+                id="nome" 
+                [(ngModel)]="dipendente.nome"
+                name="nome" 
+                placeholder="Inserisci il nome"
+            />
         </div>
 
         <div class="form-group">
             <label> Cognome </label>
-            <input type="text" class="form-control mt-3" id="cognome" [(ngModel)]="dipendente.cognome" 
-            name="cognome" placeholder="Inserisci il cognome">
+            <input 
+                type="text" 
+                class="form-control mt-3" 
+                id="cognome" 
+                [(ngModel)]="dipendente.cognome" 
+                name="cognome"
+                placeholder="Inserisci il cognome"
+            />
         </div>
 
         <div class="form-group">
             <label> Matricola </label>
-            <input type="text" class="form-control mt-3" id="matricola" [(ngModel)]="dipendente.matricola" 
-            name="matricola" placeholder="Inserisci la matricola">
+            <input 
+                type="text" 
+                class="form-control mt-3" 
+                id="matricola" 
+                [(ngModel)]="dipendente.matricola" 
+                name="matricola" 
+                placeholder="Inserisci la matricola"
+            />
         </div>
 
         <div class="form-group">
@@ -47,8 +65,6 @@
         </div>
 
         <button class="btn btn-success mt-3" type="submit" (click)="saveDipendente()">Invia</button>
-
-
     </form>
 
 </div>

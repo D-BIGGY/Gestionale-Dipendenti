@@ -1,17 +1,18 @@
-
-
 <div class="container">
     <div class="logo">VUOI ENTRARE?</div>
     <div class="login-item">
-      <form action="" method="post" class="form form-login">
+      <form class="form form-login" (ngSubmit)="loginsDipendente(formlogin)" #formlogin="ngForm">
         <div class="form-field">
-          <label class="user" for="login-username"><span class="hidden">Username</span></label>
-          <input id="login-username" type="text" class="form-input" placeholder="Inserisci Username" required>
+          <label class="user" for="login-username">
+            <span class="hidden">Username</span>
+          </label>
+          <input id="login-username" name="username" type="text" class="form-input" placeholder="Inserisci Username" ngModel required>
         </div>
-
         <div class="form-field">
-          <label class="lock" for="login-password"><span class="hidden">Password</span></label>
-          <input id="login-password" type="password" class="form-input" placeholder="Inserisci Password" required>
+          <label class="lock" for="login-password">
+            <span class="hidden">Password</span>
+          </label>
+          <input id="login-password" name="password" type="password" class="form-input"  placeholder="Inserisci Password" ngModel required>
         </div>
 
         <div class="form-field">

@@ -38,7 +38,6 @@ export class ModificaDipendentiComponent implements OnInit{
         this.dipendente = new Dipendente();
       }, error => console.log(error)
       )
-
   }
 
   onSubmit(){

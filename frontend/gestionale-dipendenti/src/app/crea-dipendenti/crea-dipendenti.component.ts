@@ -25,7 +25,6 @@ export class CreaDipendentiComponent implements OnInit{
   saveDipendente(){
     this.dipendenteService.createDipendente(this.dipendente).subscribe( data => {
       console.log(data);
-      this.goToDipendentiList();
       
     },
       error => console.log(error));
@@ -39,7 +38,7 @@ export class CreaDipendentiComponent implements OnInit{
   onSubmit(){
     console.log(this.dipendente);
     this.saveDipendente();
-    
+    this.goToDipendentiList();
   }
 
   onCheckBoxChange() {
