@@ -35,9 +35,12 @@ public class Dipendente {
 	@NotNull
 	@Email
 	private String email;
+	@Column
+	@NotNull
+	private Boolean ruolo;
 
 	public Dipendente(Long id, @NotNull String matricola, @NotNull String nome, @NotNull String cognome,
-			@NotNull String username, @NotNull String password, @NotNull @Email String email) {
+			@NotNull String username, @NotNull String password, @NotNull @Email String email, @NotNull Boolean ruolo) {
 		super();
 		this.id = id;
 		this.matricola = matricola;
@@ -46,10 +49,19 @@ public class Dipendente {
 		this.username = username;
 		this.password = password;
 		this.email = email;
+		this.ruolo = ruolo;
 	}
 
 	public Dipendente() {
 		super();
+	}
+
+	public Boolean getRuolo() {
+		return ruolo;
+	}
+
+	public void setRuolo(Boolean ruolo) {
+		this.ruolo = ruolo;
 	}
 
 	public String getEmail() {
