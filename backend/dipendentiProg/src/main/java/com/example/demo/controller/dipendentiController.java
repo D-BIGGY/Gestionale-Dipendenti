@@ -91,10 +91,11 @@ public class dipendentiController {
 		return entserv.getTutteEntrate();
 	}
 
-	@GetMapping("/aggUscita")
+	@PostMapping("/aggUscita")
 	public void aggUsc(@RequestBody Uscite uscite) {
 		uscserv.saveUscita(uscite);
 	}
+
 
 	@GetMapping("/uscita/{id}")
 	public Optional<Uscite> getUscita(@PathVariable("id") Long id) {
