@@ -40,6 +40,12 @@
             name="password" placeholder="Inserisci la password">
         </div>
 
+        <div >
+            <label> Amministratore: (SI/NO) </label>
+            <br>
+            <input type="checkbox" id="ruolo" name="ruolo" [(ngModel)]="checkBoxValue" (change)="onCheckBoxChange()">
+        </div>
+
         <button class="btn btn-success mt-3" type="submit" (click)="saveDipendente()">Invia</button>
 
 

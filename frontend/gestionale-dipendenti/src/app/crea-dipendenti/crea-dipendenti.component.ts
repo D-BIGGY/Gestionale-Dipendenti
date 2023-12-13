@@ -11,7 +11,7 @@ import { Dipendente } from '../dipendente';
 
 export class CreaDipendentiComponent implements OnInit{
   dipendente: Dipendente = new Dipendente;
-
+  checkBoxValue: boolean = false;
 
   constructor(
     private dipendenteService: DipendenteService,
@@ -41,5 +41,10 @@ export class CreaDipendentiComponent implements OnInit{
     this.saveDipendente();
     
   }
+
+  onCheckBoxChange() {
+    this.dipendente.ruolo = this.checkBoxValue;
+  }
+
 
 }
